@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grade 9 Advanced Physics - Types of Waves Exam</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .answer-box, #results-panel { display: none; }
+    .answers-visible .answer-box { display: block; }
+    .correct { background-color: #dcfce7 !important; border-color: #16a34a !important; }
+    .incorrect { background-color: #fee2e2 !important; border-color: #dc2626 !important; }
+    @media print {
+      .no-print { display: none !important; }
+      .shadow-lg, .shadow-md { box-shadow: none !important; }
+      body { background: white !important; color: black !important; }
+      .bg-gray-50, .bg-white, .bg-blue-50, .bg-green-50, #results-panel { background-color: white !important; }
+      input { border: 1px solid #ccc !important; background: transparent !important; }
+    }
+    .fade-in { animation: fadeIn 0.5s ease-in; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+    .timer-warning { color: #dc2626 !important; animation: pulse 1s infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800 p-4 md:p-8 min-h-screen">
+
+  <!-- Timer -->
+  <div id="timer-container" class="max-w-4xl mx-auto mb-4 text-center no-print">
+    <div class="bg-white p-4 rounded-xl shadow-md inline-block border-2 border-indigo-100">
+      <span class="text-gray-600 mr-2">⏱️ Time Remaining:</span>
+      <span id="timer" class="text-2xl font-bold text-indigo-600 font-mono">30:00</span>
+    </div>
+  </div>
+
+  <!-- Controls -->
+  <div class="max-w-4xl mx-auto mb-6 flex flex-wrap gap-3 justify-center no-print">
+    <button onclick="toggleAnswers()" class="bg-blue-600 hover:bg-blue-700 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer">
+      👁️ Show / Hide Model Answers
+    </button>
+    <button onclick="window.print()" class="bg-gray-800 hover:bg-gray-900 text-white px-5 py-2 rounded-lg font-medium transition shadow cursor-pointer">
+      🖨️ Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- Header -->
+  <header class="max-w-4xl mx-auto bg-white p-6 rounded-xl shadow-md mb-8 border-l-4 border-indigo-600">
+    <div class="text-center">
+      <h1 class="text-2xl md:text-3xl font-bold text-gray-900 mb-2">🌊 Grade 9 Advanced Physics</h1>
+      <h2 class="text-lg text-indigo-600 font-semibold">Chapter 3: Types of Waves</h2>
+    </div>
+    <div class="mt-4 flex flex-wrap justify-center gap-4 text-sm text-gray-600">
+      <span>📅 Date: <input type="text" class="border-b border-gray-400 bg-transparent w-28 text-center"></span>
+      <span>👤 Name: <input type="text" id="studentName" class="border-b border-gray-400 bg-transparent w-32 text-center" placeholder="Enter Name"></span>
+      <span>⏱️ Duration: 30 min</span>
+      <span>📊 Total: 100 Marks</span>
+    </div>
+    <p class="mt-2 text-xs text-center text-gray-500">💡 Note: All questions are multiple-choice. Select the best answer.</p>
+  </header>
+
+  <main class="max-w-4xl mx-auto space-y-8">
+
+    <!-- Topic 1: Transverse Waves -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="1">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 1: Transverse Waves</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>1.</strong> In a transverse wave, particles vibrate:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q1" value="a" class="mr-2"> a) Perpendicular to the direction of wave propagation</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q1" value="b" class="mr-2"> b) Parallel to the direction of wave propagation</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q1" value="c" class="mr-2"> c) In a circular path</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q1" value="d" class="mr-2"> d) Randomly in all directions</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: a)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>2.</strong> Which of the following is an example of a transverse wave?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q2" value="a" class="mr-2"> a) Sound wave in air</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q2" value="b" class="mr-2"> b) Light wave (electromagnetic wave)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q2" value="c" class="mr-2"> c) Compression in a spring</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q2" value="d" class="mr-2"> d) Ultrasound</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>3.</strong> The highest point of a transverse wave is called:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q3" value="a" class="mr-2"> a) Trough</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q3" value="b" class="mr-2"> b) Peak (Crest)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q3" value="c" class="mr-2"> c) Compression</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q3" value="d" class="mr-2"> d) Rarefaction</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>4.</strong> Transverse waves are characterized by:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q4" value="a" class="mr-2"> a) Compressions and rarefactions</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q4" value="b" class="mr-2"> b) Peaks and troughs</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q4" value="c" class="mr-2"> c) Circular motion only</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q4" value="d" class="mr-2"> d) No particle motion</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 2: Longitudinal Waves -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="2">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 2: Longitudinal Waves</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>5.</strong> In a longitudinal wave, particles of the medium move:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q5" value="a" class="mr-2"> a) Perpendicular to wave motion</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q5" value="b" class="mr-2"> b) Parallel to wave motion</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q5" value="c" class="mr-2"> c) In circular paths only</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q5" value="d" class="mr-2"> d) Randomly</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>6.</strong> Which of the following is an example of a longitudinal wave?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q6" value="a" class="mr-2"> a) Light wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q6" value="b" class="mr-2"> b) Sound wave in air</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q6" value="c" class="mr-2"> c) Water surface wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q6" value="d" class="mr-2"> d) Wave on a rope</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>7.</strong> In which wave are compressions and rarefactions formed?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q7" value="a" class="mr-2"> a) Transverse wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q7" value="b" class="mr-2"> b) Longitudinal wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q7" value="c" class="mr-2"> c) Surface wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q7" value="d" class="mr-2"> d) Electromagnetic wave</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>8.</strong> When a slinky spring is pushed and pulled horizontally, it mainly produces:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q8" value="a" class="mr-2"> a) Transverse waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q8" value="b" class="mr-2"> b) Longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q8" value="c" class="mr-2"> c) Surface waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q8" value="d" class="mr-2"> d) Circular waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 3: Surface Waves -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="3">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 3: Surface Waves</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>9.</strong> A surface wave combines properties of:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q9" value="a" class="mr-2"> a) Electromagnetic and sound waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q9" value="b" class="mr-2"> b) Transverse and longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q9" value="c" class="mr-2"> c) Pulse and periodic waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q9" value="d" class="mr-2"> d) Standing and traveling waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>10.</strong> In a surface wave, particles of the medium move:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q10" value="a" class="mr-2"> a) In straight vertical lines</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q10" value="b" class="mr-2"> b) In straight horizontal lines</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q10" value="c" class="mr-2"> c) In circular paths</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q10" value="d" class="mr-2"> d) Without motion</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>11.</strong> Near the surface of water, waves look like:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q11" value="a" class="mr-2"> a) Longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q11" value="b" class="mr-2"> b) Transverse waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q11" value="c" class="mr-2"> c) Standing waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q11" value="d" class="mr-2"> d) Stationary waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>12.</strong> Deeper in the water, surface waves look like:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q12" value="a" class="mr-2"> a) Transverse waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q12" value="b" class="mr-2"> b) Longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q12" value="c" class="mr-2"> c) Electromagnetic waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q12" value="d" class="mr-2"> d) Standing waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 4: Wave Identification & Diagrams -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="4">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 4: Wave Identification & Diagrams</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>13.</strong> Which type of wave has particles vibrating perpendicular to the direction of wave travel?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q13" value="a" class="mr-2"> a) Longitudinal wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q13" value="b" class="mr-2"> b) Surface wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q13" value="c" class="mr-2"> c) Transverse wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q13" value="d" class="mr-2"> d) Sound wave</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>14.</strong> Ocean waves are best classified as:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q14" value="a" class="mr-2"> a) Purely transverse</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q14" value="b" class="mr-2"> b) Purely longitudinal</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q14" value="c" class="mr-2"> c) Surface waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q14" value="d" class="mr-2"> d) Stationary waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>15.</strong> A rope being shaken up and down produces:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q15" value="a" class="mr-2"> a) Longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q15" value="b" class="mr-2"> b) Transverse waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q15" value="c" class="mr-2"> c) Surface waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q15" value="d" class="mr-2"> d) Sound waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>16.</strong> Which feature belongs to longitudinal waves?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q16" value="a" class="mr-2"> a) Crest</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q16" value="b" class="mr-2"> b) Trough</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q16" value="c" class="mr-2"> c) Compression</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q16" value="d" class="mr-2"> d) Circular motion only</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 5: Wave Properties & Direction -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="5">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 5: Wave Properties & Direction</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>17.</strong> A large speaker produces sound with high intensity. Sound waves travel in air as longitudinal waves. Which shows the correct direction?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q17" value="a" class="mr-2"> a) Wave: Left-Right, Particle: Left-Right</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q17" value="b" class="mr-2"> b) Wave: Left-Right, Particle: Up-Down</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q17" value="c" class="mr-2"> c) Wave: Up-Down, Particle: Left-Right</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q17" value="d" class="mr-2"> d) Wave: Up-Down, Particle: Up-Down</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: a)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>18.</strong> Disturbances in a medium travel in the direction of:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q18" value="a" class="mr-2"> a) Random direction</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q18" value="b" class="mr-2"> b) Perpendicular direction (for transverse)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q18" value="c" class="mr-2"> c) Parallel direction (for longitudinal)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q18" value="d" class="mr-2"> d) Depends on wave type</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: d)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>19.</strong> Which statement about transverse waves is TRUE?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q19" value="a" class="mr-2"> a) Particles move parallel to the wave direction</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q19" value="b" class="mr-2"> b) Energy does not transfer</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q19" value="c" class="mr-2"> c) Particles move perpendicular to the wave direction</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q19" value="d" class="mr-2"> d) They only travel in solids</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>20.</strong> In a longitudinal sound wave moving through air, air particles move:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q20" value="a" class="mr-2"> a) Up and down</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q20" value="b" class="mr-2"> b) Back and forth (parallel to wave)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q20" value="c" class="mr-2"> c) In circles</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q20" value="d" class="mr-2"> d) Randomly</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 6: Wave Examples & Applications -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="6">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 6: Wave Examples & Applications</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>21.</strong> Which of the following is an example of a transverse wave?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q21" value="a" class="mr-2"> a) Sound in air</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q21" value="b" class="mr-2"> b) Compression in a spring</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q21" value="c" class="mr-2"> c) Light wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q21" value="d" class="mr-2"> d) Ultrasound</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>22.</strong> Which wave type causes particles to move in circular paths?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q22" value="a" class="mr-2"> a) Transverse wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q22" value="b" class="mr-2"> b) Longitudinal wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q22" value="c" class="mr-2"> c) Surface wave</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q22" value="d" class="mr-2"> d) Stationary wave</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>23.</strong> Water surface waves are an example of:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q23" value="a" class="mr-2"> a) Purely transverse waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q23" value="b" class="mr-2"> b) Purely longitudinal waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q23" value="c" class="mr-2"> c) Surface waves (combination)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q23" value="d" class="mr-2"> d) Electromagnetic waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>24.</strong> A wave traveling through a medium has both compressions and perpendicular particle motion. This wave is MOST likely:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q24" value="a" class="mr-2"> a) Transverse</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q24" value="b" class="mr-2"> b) Longitudinal</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q24" value="c" class="mr-2"> c) Surface</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q24" value="d" class="mr-2"> d) Electromagnetic</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Topic 7: Advanced Concepts -->
+    <section class="bg-white p-6 rounded-xl shadow-lg" data-topic="7">
+      <h2 class="text-xl font-bold mb-4 text-indigo-700">🔹 Topic 7: Advanced Concepts</h2>
+      <ol class="space-y-4 text-sm">
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>25.</strong> In surface waves, particles near the water surface usually move:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q25" value="a" class="mr-2"> a) In straight vertical lines</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q25" value="b" class="mr-2"> b) In straight horizontal lines</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q25" value="c" class="mr-2"> c) In circular orbits</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q25" value="d" class="mr-2"> d) Without motion</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>26.</strong> Which type of wave can travel through vacuum (empty space)?<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q26" value="a" class="mr-2"> a) Sound waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q26" value="b" class="mr-2"> b) Water waves</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q26" value="c" class="mr-2"> c) Electromagnetic waves (transverse)</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q26" value="d" class="mr-2"> d) Surface waves</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: c)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>27.</strong> The lowest point of a transverse wave is called:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q27" value="a" class="mr-2"> a) Crest</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q27" value="b" class="mr-2"> b) Trough</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q27" value="c" class="mr-2"> c) Compression</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q27" value="d" class="mr-2"> d) Rarefaction</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: b)</div>
+        </li>
+        <li class="border-l-4 border-indigo-500 pl-4 py-2">
+          <strong>28.</strong> Sound waves CANNOT travel through:<br>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q28" value="a" class="mr-2"> a) Solids</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q28" value="b" class="mr-2"> b) Liquids</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q28" value="c" class="mr-2"> c) Gases</label>
+          <label class="ml-4 cursor-pointer"><input type="radio" name="q28" value="d" class="mr-2"> d) Vacuum</label>
+          <div class="answer-box text-green-700 mt-2 font-medium">✅ Answer: d)</div>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Submit & Email Buttons -->
+    <div class="text-center no-print pb-8">
+      <button onclick="gradeExam()" class="bg-gradient-to-r from-emerald-600 to-teal-600 hover:from-emerald-700 hover:to-teal-700 text-white text-lg px-10 py-4 rounded-xl font-bold shadow-xl transition transform hover:scale-105 cursor-pointer">
+        📝 Submit & Auto-Grade Exam
+      </button>
+      <p class="text-xs text-gray-500 mt-3">Results appear instantly with detailed feedback.</p>
+      
+      <button id="sendEmailBtn" onclick="sendResultsToEmail()" class="mt-4 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white text-lg px-10 py-4 rounded-xl font-bold shadow-xl transition transform hover:scale-105 cursor-pointer hidden">
+        📧 Send Results to Teacher
+      </button>
+      <p id="emailStatus" class="text-sm mt-2 text-center font-medium"></p>
+    </div>
+
+  </main>
+
+  <!-- Results Panel -->
+  <div id="results-panel" class="max-w-4xl mx-auto mt-8 bg-white p-8 rounded-2xl shadow-2xl border-t-4 border-emerald-500 fade-in no-print">
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">📊 Exam Results</h2>
+    
+    <div class="grid md:grid-cols-3 gap-4 mb-6">
+      <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-4 rounded-xl text-center">
+        <p class="text-sm text-gray-600">Student Name</p>
+        <p id="res-name" class="font-bold text-xl text-indigo-700">-</p>
+      </div>
+      <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-4 rounded-xl text-center">
+        <p class="text-sm text-gray-600">Date</p>
+        <p id="res-date" class="font-bold text-xl text-purple-700">-</p>
+      </div>
+      <div class="bg-gradient-to-br from-emerald-50 to-teal-50 p-4 rounded-xl text-center">
+        <p class="text-sm text-gray-600">Total Score</p>
+        <p id="res-total" class="font-bold text-3xl text-emerald-600">0 / 100</p>
+      </div>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-xl mb-6">
+      <h3 class="font-bold text-lg mb-4">Score Breakdown by Topic:</h3>
+      <div id="breakdown" class="space-y-2"></div>
+    </div>
+
+    <div class="bg-blue-50 p-4 rounded-xl text-sm text-blue-800 mb-6">
+      <strong>📌 Note:</strong> All questions are multiple-choice. Correct answers highlighted in green, incorrect in red. Review your selections before printing.
+    </div>
+
+    <div class="flex gap-3 justify-center">
+      <button onclick="window.print()" class="bg-gray-700 hover:bg-gray-800 text-white px-6 py-3 rounded-lg font-semibold cursor-pointer transition">
+        🖨️ Print Results
+      </button>
+    </div>
+  </div>
+
+  <footer class="max-w-4xl mx-auto mt-10 mb-8 text-center text-gray-500 text-sm no-print">
+    © Grade 9 Advanced Physics Exam | Types of Waves | Auto-Grading System | Mr.Mohammed Hesham
+  </footer>
+
+  <script>
+    // ============================================================
+    // ⚠️ STEP 1: REPLACE WITH YOUR EMAILJS CREDENTIALS
+    // ============================================================
+    const PUBLIC_KEY = "Rb3Lq8tXaFmc5YHUH";
+    const SERVICE_ID = "service_w15m64i";
+    const TEMPLATE_ID = "template_5b0u2tq";
+    const TARGET_EMAIL = "mohammedhesham872@gmail.com";
+    // ============================================================
+
+    (function(){ emailjs.init(PUBLIC_KEY); })();
+
+    // Timer functionality
+    let timeRemaining = 1800; // 30 minutes in seconds
+    let timerInterval;
+
+    function startTimer() {
+      document.getElementById('timer-container').style.display = 'block';
+      timerInterval = setInterval(() => {
+        timeRemaining--;
+        const minutes = Math.floor(timeRemaining / 60);
+        const seconds = timeRemaining % 60;
+        const timerEl = document.getElementById('timer');
+        timerEl.textContent = `${minutes.toString().padStart(2,'0')}:${seconds.toString().padStart(2,'0')}`;
+        
+        if (timeRemaining <= 300) {
+          timerEl.classList.add('timer-warning');
+        }
+        
+        if (timeRemaining <= 0) {
+          clearInterval(timerInterval);
+          alert("Time's up! Your exam will be submitted automatically.");
+          gradeExam();
+        }
+      }, 1000);
+    }
+
+    function toggleAnswers() {
+      document.body.classList.toggle('answers-visible');
+    }
+
+    // Fisher-Yates shuffle for random ordering
+    function shuffleArray(array) {
+      const newArray = [...array];
+      for (let i = newArray.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+      }
+      return newArray;
+    }
+
+    // Shuffle questions within each topic section on page load
+    function shuffleQuestions() {
+      const sections = document.querySelectorAll('main section ol');
+      sections.forEach(ol => {
+        const items = Array.from(ol.children);
+        const shuffled = shuffleArray(items);
+        shuffled.forEach(item => ol.appendChild(item));
+      });
+    }
+
+    function gradeExam() {
+      clearInterval(timerInterval);
+      const name = document.getElementById('studentName').value || 'Student';
+      const date = document.querySelector('input[type="text"]').value || new Date().toLocaleDateString();
+      let total = 0;
+      const breakdown = [];
+
+      // Correct answers for 28 questions
+      const correctAnswers = [
+        'a','b','b','b', // Topic 1: Transverse
+        'b','b','b','b', // Topic 2: Longitudinal
+        'b','c','b','b', // Topic 3: Surface
+        'c','c','b','c', // Topic 4: Identification
+        'a','d','c','b', // Topic 5: Properties
+        'c','c','c','c', // Topic 6: Examples
+        'c','c','b','d'  // Topic 7: Advanced
+      ];
+
+      let topicScores = [0,0,0,0,0,0,0];
+      const topicNames = [
+        "Transverse Waves",
+        "Longitudinal Waves",
+        "Surface Waves",
+        "Wave Identification & Diagrams",
+        "Wave Properties & Direction",
+        "Wave Examples & Applications",
+        "Advanced Concepts"
+      ];
+
+      for(let i=1; i<=28; i++){
+        const selected = document.querySelector(`input[name="q${i}"]:checked`);
+        const match = selected && selected.value === correctAnswers[i-1];
+        if(match) {
+          total += 3.57; // 100/28 ≈ 3.57 per question
+          topicScores[Math.floor((i-1)/4)] += 3.57;
+        }
+        const parent = document.querySelector(`input[name="q${i}"]`).closest('li');
+        parent.classList.add(match ? 'correct' : 'incorrect');
+      }
+
+      total = Math.round(total);
+      topicScores.forEach((score, idx) => {
+        breakdown.push(`<div class="flex justify-between p-2 bg-white rounded"><span>${topicNames[idx]}</span><span class="font-bold text-indigo-700">${Math.round(score)}/14</span></div>`);
+      });
+
+      document.getElementById('res-name').textContent = name;
+      document.getElementById('res-date').textContent = date;
+      document.getElementById('res-total').textContent = `${total} / 100`;
+      document.getElementById('breakdown').innerHTML = breakdown.join('');
+      
+      const panel = document.getElementById('results-panel');
+      panel.style.display = 'block';
+      panel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      
+      document.getElementById('sendEmailBtn').classList.remove('hidden');
+    }
+
+    function sendResultsToEmail() {
+      const btn = document.getElementById('sendEmailBtn');
+      const status = document.getElementById('emailStatus');
+      btn.disabled = true;
+      btn.textContent = '⏳ Sending...';
+
+      const name = document.getElementById('studentName').value || 'N/A';
+      const date = document.querySelector('input[type="text"]').value || new Date().toLocaleDateString();
+      const score = document.getElementById('res-total').textContent;
+
+      let answersHTML = `<table style="border:1px solid #e5e7eb; border-collapse:collapse; width:100%; font-family:Arial; font-size:12px;">
+        <tr style="background:#4F46E5; color:white;"><th style="border:1px solid #e5e7eb; padding:8px;">Q#</th><th style="border:1px solid #e5e7eb; padding:8px;">Topic</th><th style="border:1px solid #e5e7eb; padding:8px;">Selected</th><th style="border:1px solid #e5e7eb; padding:8px;">Status</th></tr>`;
+      
+      const topics = ["Transverse","Transverse","Transverse","Transverse","Longitudinal","Longitudinal","Longitudinal","Longitudinal","Surface","Surface","Surface","Surface","Identification","Identification","Identification","Identification","Properties","Properties","Properties","Properties","Examples","Examples","Examples","Examples","Advanced","Advanced","Advanced","Advanced"];
+      
+      for(let i=1; i<=28; i++) {
+        const sel = document.querySelector(`input[name="q${i}"]:checked`);
+        const isCorrect = sel && sel.value === correctAnswers[i-1];
+        answersHTML += `<tr><td style="border:1px solid #e5e7eb; padding:6px;">${i}</td><td style="border:1px solid #e5e7eb; padding:6px;">${topics[i-1]}</td><td style="border:1px solid #e5e7eb; padding:6px;">${sel ? sel.value.toUpperCase() : '-'}</td><td style="border:1px solid #e5e7eb; padding:6px; color:${isCorrect ? 'green' : 'red'}">${isCorrect ? '✅' : '❌'}</td></tr>`;
+      }
+      answersHTML += '</table>';
+
+      const templateParams = {
+        to_email: TARGET_EMAIL,
+        student_name: name,
+        exam_date: date,
+        total_score: score,
+        answers_table: answersHTML
+      };
+
+      emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
+        .then(() => {
+          status.textContent = '✅ Sent successfully! Check your Gmail.';
+          status.style.color = '#059669';
+          btn.textContent = '✓ Sent';
+        })
+        .catch(err => {
+          status.textContent = '❌ Failed. Check console or setup.';
+          status.style.color = '#dc2626';
+          btn.disabled = false;
+          btn.textContent = '📧 Retry Send';
+          console.error('EmailJS Error:', err);
+        });
+    }
+
+    // Initialize: shuffle questions and start timer on page load
+    window.addEventListener('DOMContentLoaded', () => {
+      shuffleQuestions();
+      startTimer();
+    });
+  </script>
+</body>
+</html>
